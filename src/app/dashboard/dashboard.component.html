@@ -1,1 +1,15 @@
 <p>dashboard works!</p>
+<div class="text-3xl font-bold underline cursor-pointer">hello world</div>
+@for (item of items; track $index) { @if (item.age > 2) {
+<!-- <p>loading ...</p> -->
+@defer () {} @placeholder (minimum 1s){
+<p>placeholder ...</p>
+}
+<p>name:{{ item.name }} --- age:{{ item.age }}</p>
+
+} }
+<h2>count : {{ count() }}</h2>
+<h3>gtCount : {{ gtCount() }}</h3>
+<button class="border-slate-950 border border-solid" (click)="onClickToAdd()">
+  add
+</button>
